@@ -1,0 +1,10 @@
+first line of input
+second line of input
+thrird line of input
+this is sent to input.txt
+this is sent to input.txt
+this is sent to input.txt
+this is sent to input.txt
+this is sent to input.txt
+this is sent to input.txt
+this is sent to input.txt
