@@ -1,0 +1,8 @@
+* cmd hacks
+** cmd expansions
+*** capture the last argument of the previous command
+*!$*
+#+begin_example
+mkdir -p system/user
+cd !$
+#+end_example
