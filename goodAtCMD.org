@@ -6,3 +6,10 @@
 mkdir -p system/user
 cd !$
 #+end_example
+
+
+*** likewise getting other arguments
+=!*=   *-all args of previous command*
+=!:1=  *-first argument of prev command*
+=!!=   *-entire previous argument*
+
