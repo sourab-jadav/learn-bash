@@ -1,0 +1,24 @@
+* create a systemd service to run the cmd after every boot
+- Step 1: Create a service file
+  #+begin_src
+    sudo nano /etc/systemd/system/mycommand.service
+  #+end_src
+- Step 2: Add this
+  #+begin_src bash
+    [Unit]
+    Description=Run my command at boot
+    After=network.target
+
+    [Service]
+    Type=oneshot
+    ExecStart=/path/to/your/command
+
+    [Install]
+    WantedBy=multi-user.target
+  #+end_src
+- Step 3: Enable it
+  #+begin_src bash
+    sudo systemctl enable mycommand.service
+  #+end_src
+
+
