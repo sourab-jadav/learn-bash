@@ -13,3 +13,17 @@ cd !$
 =!:1=  *-first argument of prev command*
 =!!=   *-entire previous argument*
 
+*** store the prev command in ref and use it
+#+begin_src
+dir="systemd/user"
+mkdir -p "$dir"
+cd "$dir"
+#+end_src
+
+
+*** shortcuts to expand at a point
+=Alt+.= *-last argument of previous command*
+=C-M-e= *-explicitly expand shell history expansions without executing*
+=Alt+_= *-cycles through older arguments*xg
+----
+
