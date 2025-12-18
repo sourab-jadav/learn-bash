@@ -1,5 +1,20 @@
 * cmd hacks
 ** cmd expansions
+
+*** getting the number of arguments
+$#
+this gives us the number of arguments
+
+**** check for a specific argument
+#+begin_src bash
+  if [ -z "$1" ]; then
+      echo "first argument is empty"
+  else
+      echo "first argument is not empty"
+  fi  
+#+end_src
+
+
 *** capture the last argument of the previous command
 *!$*
 #+begin_example
