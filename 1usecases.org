@@ -22,3 +22,16 @@
   #+end_src
 
 
+
+* executing the command serially and passed as argument to another command
+#+begin_src bash
+  if [ $# -ne 2 ]; then
+      echo "usage ..."
+      exit 1
+  fi
+  git <some op> $2 --undelete $(git <some op> -d "$1" | tail -1 | awk '{print $5})
+  # here $() on the right side get's executed first in a subshell and passed as an argument to the left command
+                                # the right command takes the last line of the output and extracts the 5th column(starting from 1) sep by spaces
+#+end_src
+
+
