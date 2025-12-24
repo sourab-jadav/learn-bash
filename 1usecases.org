@@ -35,3 +35,50 @@
 #+end_src
 
 
+* make soft links in linux systems (makelinks.sh)
+#+begin_src bash
+    #!/bin/bash
+  # taken from https://github.com/dfryer1193/dotfiles/blob/main/makelinks.sh
+  boldYellow='\033[1;33m'
+  boldGrn='\033[1;32m'
+  reset='\033[0m'
+
+  create_msg() { echo -e "[ ${boldGrn}CREATE${reset} ] $@"; }
+
+  exists_msg() { echo -e "[ ${boldYellow}EXISTS${reset} ] $@"; }
+
+  makelink() {
+    lname=$1
+    fname=$HOME/$lname
+    if [[ ! -e $fname ]]; then    # to check if fname exist
+      if [[ ! -e ${fname%/*} ]]; then # to check if subdir exists
+        mkdir -p ${fname%/*}
+      fi
+      #echo $lname :: $fname 
+      ln -s $HOME/dotfiles/$lname $fname
+      create_msg "$fname"
+    else
+      exists_msg "$fname"
+    fi
+  }
+
+  makelink .gitignore             # calling to above functions is cool!!
+  git config --global core.excludesfile ~/.gitignore
+  makelink .bashrc
+  makelink .bash_aliases
+  makelink .bash_colors
+  makelink .gemini/SYSTEM.md
+  makelink .gemini/GEMINI.md
+  makelink .tmux.conf
+  makelink .zshrc
+  makelink .zshenv
+  makelink .zsh_aliases
+
+  for file in .config/*; do       # traversering through all files in the .config directory present in current directory
+    makelink $file
+  done
+
+  for file in .bin/*; do          # traversing all links
+    makelink $file
+  done
+#+end_src
