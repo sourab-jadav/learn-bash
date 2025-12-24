@@ -76,3 +76,5 @@ fi
 
 # if a filename exit
     if [[ ! -e $fname ]]; then  
+        if [[ ! -e ${fname%/*} ]]; then # to check if subdir exists
+            # type help test to get all the conditionals
