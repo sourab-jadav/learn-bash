@@ -9,6 +9,8 @@
                                     # field value $(value) start from 1
                                     # That's it - first line containing fpr, 10th colon-separated field, then stop.
 #+end_src
+
+#+begin_src bash
   ~/work/learn-bash/awk/practise [2] $ awk '{print}' data.txt 
   john 25 engineer 5000
   mary 30 designer 6000
@@ -58,3 +60,8 @@
 
   awk -F: '{print $1, $7}' /etc/passwd # here ':' is the field seperator
 
+  ~/work/learn-bash/awk/practise $ awk '$1 >25 && $NF > 3000 {print}' data.txt # multiple conditions
+  john 25 engineer 5000
+  mary 30 designer 6000
+  lisa 28 engineer 5500
+#+end_src
