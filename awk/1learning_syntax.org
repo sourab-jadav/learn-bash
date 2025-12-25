@@ -9,3 +9,15 @@
                                     # field value $(value) start from 1
                                     # That's it - first line containing fpr, 10th colon-separated field, then stop.
 #+end_src
+  ~/work/learn-bash/awk/practise [2] $ awk '{print}' data.txt 
+  john 25 engineer 5000
+  mary 30 designer 6000
+  alex 22 student 2000
+  lisa 28 engineer 5500
+
+  ~/work/learn-bash/awk/practise $ # print columns
+  ~/work/learn-bash/awk/practise $ awk '{print $2}' data.txt 
+  25
+  30
+  22
+  28
