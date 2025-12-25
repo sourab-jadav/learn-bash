@@ -55,3 +55,6 @@
   6000
   ~/work/learn-bash/awk/practise $ awk '{if($4 > max) max=$4} END { print max}' data.txt 
   6000
+
+  awk -F: '{print $1, $7}' /etc/passwd # here ':' is the field seperator
+
