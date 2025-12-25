@@ -21,3 +21,15 @@
   30
   22
   28
+
+  ~/work/learn-bash/awk/practise [2] $ awk '{print $NF}' data.txt # NF is number of fields
+  5000
+  6000
+  2000
+  5500
+
+  ~/work/learn-bash/awk/practise $ awk '{print $NR}' data.txt # NR is Record number
+  john
+  30
+  student
+  5500
