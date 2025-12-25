@@ -33,3 +33,15 @@
   30
   student
   5500
+
+  ~/work/learn-bash/awk/practise $ awk '$2 >25' data.txt 
+  mary 30 designer 6000
+  lisa 28 engineer 5500
+
+  ~/work/learn-bash/awk/practise $ awk '$2 > 25 {print $1}' data.txt 
+  mary
+  lisa
+
+  ~/work/learn-bash/awk/practise [2] $ awk '$3=="engineer" && $4>5200' data.txt 
+  lisa 28 engineer 5500
+
