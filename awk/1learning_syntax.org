@@ -48,3 +48,10 @@
   ~/work/learn-bash/awk/practise [1] $ awk '$3 == "engineer" {count++} END {print count}' data.txt 
   2
 
+  ~/work/learn-bash/awk/practise $ awk '$4>max max=$4 END {print $4}' data.txt # syntax error
+  awk: line 1: syntax error at or near =
+
+  ~/work/learn-bash/awk/practise [2] $ awk '$4>max {max=$4} END {print max}' data.txt 
+  6000
+  ~/work/learn-bash/awk/practise $ awk '{if($4 > max) max=$4} END { print max}' data.txt 
+  6000
