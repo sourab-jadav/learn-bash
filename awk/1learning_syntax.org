@@ -1,0 +1,11 @@
+* basics
+** structure
+#+begin_src awk
+  awk -F: '/fpr/ {print $10; exit}' data.txt 
+                                    # in the file data.txt
+                                    # traverse line by line
+                                    # look for the line which has fpr in it
+                                    # : is field seperator
+                                    # field value $(value) start from 1
+                                    # That's it - first line containing fpr, 10th colon-separated field, then stop.
+#+end_src
