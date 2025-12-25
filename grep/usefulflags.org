@@ -1,0 +1,4 @@
+** grep syntax
+grep <flag> <pattern> <filename>
+eg:-grep dave /usr/share/dict/words
+
