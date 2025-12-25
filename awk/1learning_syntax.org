@@ -45,3 +45,6 @@
   ~/work/learn-bash/awk/practise [2] $ awk '$3=="engineer" && $4>5200' data.txt 
   lisa 28 engineer 5500
 
+  ~/work/learn-bash/awk/practise [1] $ awk '$3 == "engineer" {count++} END {print count}' data.txt 
+  2
+
