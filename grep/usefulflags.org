@@ -2,3 +2,37 @@
 grep <flag> <pattern> <filename>
 eg:-grep dave /usr/share/dict/words
 
+** most use flags
+1. -i  ignore case
+2. -r/-R recursive search
+   * recursive search
+     #+begin_src bash
+       grep -r "TODO" .
+     #+end_src
+   * --include/--exclude
+     #+begin_src bash
+       grep -r "main" --include="*.c"
+     #+end_src
+   * -A1 , -B1
+     #+begin_src bash
+       grep -A1 b file.txt             # one line after matched line
+       grep -B1 b file.txt             # one line before matched line
+       grep -C1 b file.txt             # around the matched line
+     #+end_src
+3. -v  invert the match
+4. -n  also show line numbers
+5. -C <num> -> also show num lines before and after the match
+6. -E  extended regular expression
+   * allows |,+,?,{} without escaping
+7. -c  count the matches
+8. -w  word matching
+   * without -w normal grep does substring matching
+   * word characters are letter's digits underscores A-Z a-z 0-9 _
+9. -o print only the matching part
+
+** most used combos
+#+begin_src bash
+  grep -rin "search_term" .
+  grep -Eiv "debug|trace" app.log
+  grep -nC 3 "ERROR" logfile
+#+end_src
