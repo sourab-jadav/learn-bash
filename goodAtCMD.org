@@ -304,3 +304,20 @@ get the exit code of the last executed script (if we get 0 the script ran succes
   greet dave
   echo $?
 #+end_src
+
+*** difference between '' "" when using echo
+#+begin_src bash
+  a=2
+  b=2
+  if [[ $a == $b ]]; then
+      echo "$a a and b are the same";
+      echo '$a and b are the same';
+      echo a  and b are the same;
+  fi
+
+output:-
+  2 a and b are the same
+  $a and b are the same
+  a and b are the same
+#+end_src
+
