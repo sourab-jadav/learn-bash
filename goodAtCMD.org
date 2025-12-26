@@ -278,4 +278,13 @@ get the exit code of the last executed script (if we get 0 the script ran succes
   done
 #+end_src
 
+*** execute other script inside current script
+#+begin_src bash
+  #!/usr/bin/env bash
+  for name in "$@"; do
+      hello "$name"               # hello is a script that is present in the current director
+      #  that take an argument and prints that value
+  done
+#+end_src
+
 
