@@ -270,4 +270,12 @@ get the exit code of the last executed script (if we get 0 the script ran succes
   help '[['
 #+end_src
 
+*** loop on n number of args passed as input
+#+begin_src bash
+  #!/usr/bin/env bash
+  for thing in "$@"; do
+      echo "thing is $thing"
+  done
+#+end_src
+
 
