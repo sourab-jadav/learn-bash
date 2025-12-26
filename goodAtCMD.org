@@ -160,4 +160,5 @@ it searches for that cmd in those paths if the command found it executes it
   echo "$foo"
   hello     world
   unset foo                       # unsetting the variable
+  echo $PATH | tr '\n'            # tr cmd is used as a pipe to replace some char of a stream to another char '\n' in this case
 #+end_src
