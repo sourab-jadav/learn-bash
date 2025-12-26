@@ -249,3 +249,4 @@ get the exit code of the last executed script (if we get 0 the script ran succes
   done
 #+end_src
 
+  if [[ -n $1 ]]; then
