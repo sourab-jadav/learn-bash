@@ -300,4 +300,7 @@ get the exit code of the last executed script (if we get 0 the script ran succes
   for name in "$@"; do
       greet "$name"               # insteading calling other script we can call functions here
   done
+
+  greet dave
+  echo $?
 #+end_src
