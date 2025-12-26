@@ -264,3 +264,10 @@ get the exit code of the last executed script (if we get 0 the script ran succes
   # output:-
   # hello dave
 #+end_src
+
+*** using help for bash syntax
+#+begin_src bash
+  help '[['
+#+end_src
+
+
