@@ -141,3 +141,23 @@ tells information about what kind of data the file has
   file /bin/rm
 #+end_src
 
+*** builtin variables in linux:
+whenever you execute a command it looks in the path variable which has listing of all the paths that it needs to look
+it searches for that cmd in those paths if the command found it executes it
+#+begin_src bash
+  echo $PATH
+  echo $PWD
+  echo $USER
+  whoami
+  type whoami
+  echo $SHELL
+  echo $HOSTNAME
+  echo $MACHTYPE                  # tells about your machine
+  # setting a variable
+  foo='hello      world'
+  echo foo
+  hello world                     # hence always use "" to avoid is behaviour
+  echo "$foo"
+  hello     world
+  unset foo                       # unsetting the variable
+#+end_src
