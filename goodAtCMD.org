@@ -249,4 +249,18 @@ get the exit code of the last executed script (if we get 0 the script ran succes
   done
 #+end_src
 
+*** check if input already provided as arg
+#+begin_src bash
+  # script name:- hello
+  #!/usr/bin/bash
   if [[ -n $1 ]]; then
+      name=$1
+  else
+      read -p 'Enter your name: ' name
+  fi
+  echo "hello $name"
+  # it can also be called as follows:
+  # echo dev | ./hello
+  # output:-
+  # hello dave
+#+end_src
