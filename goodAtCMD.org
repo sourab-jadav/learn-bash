@@ -294,7 +294,7 @@ get the exit code of the last executed script (if we get 0 the script ran succes
 #+begin_src bash
   #!/usr/bin/env bash
   greet(){
-      name=$1
+      local name=$1                     # here name is acting as global to make a variable local to a function we make use of 'local' keyword
       echo "hello $name"
   }
   for name in "$@"; do
