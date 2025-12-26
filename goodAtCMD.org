@@ -234,3 +234,18 @@ get the exit code of the last executed script (if we get 0 the script ran succes
 
 
 
+*** taking input from the user
+#+begin_src bash
+  #!/usr/bin/env bash
+  read -p 'Enter your name: ' name
+  echo "hello $name"
+  # run:- echo dave | ./hello :: you will see you there is no prompt will be coming
+
+  # use read -r => to avoid problems when user type \n something
+  # by default read only reads the first line
+  # to read the multiple line do it as follows
+  while read -r line; do
+      echo line
+  done
+#+end_src
+
