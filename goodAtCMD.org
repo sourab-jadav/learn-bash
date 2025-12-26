@@ -288,3 +288,14 @@ get the exit code of the last executed script (if we get 0 the script ran succes
 #+end_src
 
 
+*** using functions
+#+begin_src bash
+  #!/usr/bin/env bash
+  greet(){
+      name=$1
+      echo "hello $name"
+  }
+  for name in "$@"; do
+      greet "$name"               # insteading calling other script we can call functions here
+  done
+#+end_src
