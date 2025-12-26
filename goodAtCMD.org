@@ -126,3 +126,11 @@ to check if  a command is bash builtin type of external command
 #+end_src
 
 
+*** compgen command
+it displays all the linux builtin commands
+#+begin_src bash
+  compgen -b
+  compgen -b | grep kill
+  history | grep less
+#+end_src
+
