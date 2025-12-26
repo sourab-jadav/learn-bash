@@ -263,6 +263,8 @@ get the exit code of the last executed script (if we get 0 the script ran succes
   # echo dev | ./hello
   # output:-
   # hello dave
+  # yes | ./hello
+  # output: hello y
 #+end_src
 
 *** using help for bash syntax
