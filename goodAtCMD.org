@@ -134,3 +134,10 @@ it displays all the linux builtin commands
   history | grep less
 #+end_src
 
+*** file cmd:
+tells information about what kind of data the file has
+#+begin_src bash
+  file somefile.txt
+  file /bin/rm
+#+end_src
+
