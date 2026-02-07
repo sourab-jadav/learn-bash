@@ -1,0 +1,30 @@
+* for loop
+#+begin_src bash
+  for thing in {a..f}; do
+      echo "thing is $thing" 
+  done
+
+  thing is a
+  thing is b
+  --
+  thing is f
+
+  for thing in {1..5}; do
+      echo "thing is $thing"
+  done
+#+end_src
+
+
+** c style for loop
+#+begin_src bash
+
+  max=5
+  for((i =0;i<max;i++)); do
+      echo "thing is $i"
+  done
+
+
+#+end_src
+
+
+
