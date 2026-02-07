@@ -43,3 +43,10 @@ ls -ld = displays current directory permissions
   grep dave /usr/share/dict/words | less -N
 #+end_src
 ---
+
+*** man cmd
+#+begin_src bash
+  man man
+  man 1 printf
+  man 3 printf
+#+end_src
