@@ -72,3 +72,7 @@ fi
 # we have file zero size as -z
 # we have file non-zero size as -n
 # we have file modified since last read as -N
+
+
+# if a filename exit
+    if [[ ! -e $fname ]]; then  
