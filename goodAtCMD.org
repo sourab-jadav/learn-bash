@@ -181,3 +181,25 @@ command to check if there are any errors in the script
 *** echo $?
 get the exit code of the last executed script (if we get 0 the script ran successfully)
 
+
+** bash syntax
+*** storing a command output in a variable
+#+begin_src bash
+  thing = `uname -a`
+  echo $thing                     # prints the same output as above
+  # FYI don't use `` use $() as shown below
+  thing = $(uname -a)
+  echo "$thing"                   # prints the same output
+#+end_src
+
+#+begin_src bash
+  #!/usr/bin/env bash
+
+  name='dave'
+  number=12
+  system=$(uname)
+
+  echo "hello $name (your number is $number)"
+  echo "your system is : $system"
+#+end_src
+
