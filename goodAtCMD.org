@@ -50,3 +50,14 @@ ls -ld = displays current directory permissions
   man 1 printf
   man 3 printf
 #+end_src
+
+*** mv cmd for renaming
+#+begin_src bash
+  /work/learn-bash/practise $ touch l1 l2 l3 l4
+  ~/work/learn-bash/practise $ ls 
+  l1  l2  l3  l4
+  ~/work/learn-bash/practise $ mv l1 lesson1
+  ~/work/learn-bash/practise $ ls 
+  l2  l3  l4  lesson
+#+end_src
+--
