@@ -203,3 +203,19 @@ get the exit code of the last executed script (if we get 0 the script ran succes
   echo "your system is : $system"
 #+end_src
 
+
+*** for loop
+#+begin_src bash
+  #!/usr/bin/env bash
+  for thing in foo bar baz bat; do
+      echo "thing is $thing"
+  done
+  thing is foo
+  thing is bar
+  thing is baz
+  thing is bat
+  thing is biz
+#+end_src
+
+
+
