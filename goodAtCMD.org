@@ -27,3 +27,10 @@ cd "$dir"
 =Alt+_= *-cycles through older arguments*xg
 ----
 
+** using core-utils
+
+*** makdir
+#+begin_src bash
+  mkdir -p ~/dir1/{subdir2,subdir3} # creates dir1 inside that subdir2 and subdir3
+#+end_src
+---
