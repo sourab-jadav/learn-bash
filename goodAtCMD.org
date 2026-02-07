@@ -36,3 +36,10 @@ ls -ld = displays current directory permissions
   mkdir -p ~/dir1/{subdir2,subdir3} # creates dir1 inside that subdir2 and subdir3
 #+end_src
 ---
+---
+
+*** less cmd
+#+begin_src bash
+  grep dave /usr/share/dict/words | less -N
+#+end_src
+---
