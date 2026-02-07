@@ -1,0 +1,22 @@
+* tools
+** managing dotfiles using stow cmd
+*** commands
+#+begin_src bash
+  mkdir ~/stow-test
+  cd ~/stow-test
+  mkdir -p dotfiles/bash
+
+  cd dotfiles
+  stow -v bash
+  # -v: Verbose mode (shows you exactly what it's doing).
+
+  Check it yourself: ls -la ~/stow-test
+  You’ll see: .bashrc -> bash/.bashrc
+
+  stow -nv bash                   # this performs simulation telling your where the link can be created on running the command
+
+  stow -t ~ nvim (This says: "Take the contents of 'nvim' and link them into my home directory.") # this is lifesaver
+#+end_src
+*** key concept
+- If your dotfiles are in ~/dotfiles, running stow there will link things to ~/.
+- if your dotfiles are somewhere else and you want to stow to home you can use -t optioin to specify the target
