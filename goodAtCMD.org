@@ -27,3 +27,70 @@ cd "$dir"
 =Alt+_= *-cycles through older arguments*xg
 ----
 
+** using core-utils
+*** ls command
+ls -ld = displays current directory permissions
+*** grep command
+grep <grep-options> '<grep location>' <patternopts> '<pattern>'
+**** flags
+***** grep options
+1. r - recurse through all subdirectories
+2. n - show the line numbers
+3. w - match the exact word
+4. C - add lines above and below the match line
+   grep -rnwC 2 '.' -e 'set'
+5. -E - extended grep in pattern opts
+   #+begin_src bash
+     grep -rnw '.' -e 'set(' -e ': set'
+     (or)
+     grep -rnw '.' -E 'HashSet|TreeSet|Set<'
+   #+end_src
+***** pattern options
+1. -e - the pattern to look for
+
+**** emacs grep
+m-x rgrep
+
+
+*** tree command
+**** doing tree ignoring .gitignore files
+git ls-files | tree -a --fromfile
+
+*** managing processes
+- vi &   -> this starts a background process
+- watch -n 2 'ps -aux'
+- pstree -p 1  -> to see all processes under process 1(systemd)
+
+**** jobs
+when a fg process goes background in suspended state it enters joblist
+jobs       # List jobs
+bg %1      # Resume job 1 in background
+fg %1      # Bring job 1 to foreground
+kill %1    # Send termination signal to job 1
+
+**** pgrep command
+For finding a particular application and its processes, use:
+pgrep -a -x firefox-esr
+
+
+**** top command
+monitor system processes
+
+**** pstree command
+-p show pids
+-s <pid> // show for specific process
+-a //shows full command arguments
+-h // highlights current process
+$USER // shows process owned by the user
+-c // will not compact identical processes
+
+**** kill command
+***** killing all processes related to a application
+killall -9 emacs -- does not close gracefully and lead to loss of unsaved data
+pkill -f emacs -- uses sigint and closes gracefully
+
+*** makdir
+#+begin_src bash
+  mkdir -p ~/dir1/{subdir2,subdir3} # creates dir1 inside that subdir2 and subdir3
+#+end_src
+---
