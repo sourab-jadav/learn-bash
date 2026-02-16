@@ -82,3 +82,6 @@
     makelink $file
   done
 #+end_src
+
+* fzy find process and kill it
+ps -ef | fzf | awk '{print $2}' | xargs kill -9
