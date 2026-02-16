@@ -85,3 +85,9 @@
 
 * fzy find process and kill it
 ps -ef | fzf | awk '{print $2}' | xargs kill -9
+
+* see all broken softlinks
+find . -xtype l
+find . -xtype l -delete
+
+
