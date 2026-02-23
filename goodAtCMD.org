@@ -162,3 +162,10 @@ it searches for that cmd in those paths if the command found it executes it
   unset foo                       # unsetting the variable
   echo $PATH | tr '\n'            # tr cmd is used as a pipe to replace some char of a stream to another char '\n' in this case
 #+end_src
+
+*** uname cmd - know system info
+#+begin_src bash
+  sourab@sourab:~$ uname -a
+Linux sourab 6.12.48+deb13-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.12.48-1 (2025-09-20) x86_64 GNU/Linux
+#+end_src
+---
