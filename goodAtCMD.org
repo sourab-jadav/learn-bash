@@ -174,3 +174,10 @@ Linux sourab 6.12.48+deb13-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.12.48-1 (2025-0
 #+begin_src bash
   lscpu
 #+end_src
+
+*** bash -n
+command to check if there are any errors in the script
+
+*** echo $?
+get the exit code of the last executed script (if we get 0 the script ran successfully)
+
