@@ -169,3 +169,8 @@ it searches for that cmd in those paths if the command found it executes it
 Linux sourab 6.12.48+deb13-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.12.48-1 (2025-09-20) x86_64 GNU/Linux
 #+end_src
 ---
+
+**** get processor information
+#+begin_src bash
+  lscpu
+#+end_src
