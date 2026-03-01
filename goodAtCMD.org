@@ -28,6 +28,8 @@ cd "$dir"
 ----
 
 ** using core-utils
+*** ls command
+ls -ld = displays current directory permissions
 
 *** makdir
 #+begin_src bash
