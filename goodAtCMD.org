@@ -108,3 +108,21 @@ rm lesson*
 #+end_src
 --
 
+
+*** type command
+to check if  a command is bash builtin type of external command
+- it will also list all types of aliases associated with the command
+- for builtin commands you can use *help* command to display their man pages
+- e.g: help echo
+- help help
+  
+#+begin_src bash
+  type history
+  history is a shell builtin
+
+  type -a ls                      # to list all the aliases
+  type -a echo
+  type -a kill
+#+end_src
+
+
