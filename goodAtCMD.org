@@ -61,3 +61,35 @@ ls -ld = displays current directory permissions
   l2  l3  l4  lesson
 #+end_src
 --
+*** rm
+rm uses glob pattern for expansion and it does not use regular expressions
+**** common usecases
+- delete all .txt files
+  rm *.txt
+- delete files staring with log
+  rm log*
+- delete files ending with digit
+  rm *[0-9]
+- delete files like file1 file2 but not file10
+  rm file?
+- delete files except .c files
+  rm !(*.c)
+**** extended globing
+enable it using
+shopt -s extglob
+
+***** if you want regex use find command
+find . -type f -regex '.*[0-9]\.log'
+find . -type f -regex '.*[0-9]\.log' -delete
+
+***** always preview before deleting
+ls *.log
+find . -regex 'pattern'
+
+***** interactive delete
+rm -i *.log
+
+**** by creating an alias
+alias rm='rm -i'
+rm lesson*
+***** you can check an alias using :- alias rm
