@@ -146,8 +146,28 @@ find . -regex 'pattern'
 
 ***** interactive delete
 rm -i *.log
-
 **** by creating an alias
 alias rm='rm -i'
 rm lesson*
 ***** you can check an alias using :- alias rm
+
+*** find cmd
+**** imp attributes
+- limit the level of search
+  -maxdepth <num>
+- type of file search
+  -type d (or) f
+- if any permission requirements
+  -perm 700
+**** use cases
+***** picking a random song out of many present inside a directory
+#+begin_src bash
+  mpv "$(find . -type f -name "*.mp3" | shuf -n 1)"
+#+end_src
+
+***** list all the dir that has perm 700(private-only user can access)
+#+begin_src bash
+  find . -maxdepth 1 -type d -perm 700
+#+end_src
+--
+
