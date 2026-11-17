@@ -74,6 +74,15 @@ git ls-files | tree -a --fromfile
 - watch -n 2 'ps -aux'
 - pstree -p 1  -> to see all processes under process 1(systemd)
 
+**** ss command
+another utility to manage sockets
+
+***** to know on what port number a process it requesting
+  #+begin_src bash
+    ss -tulpin | grep syncthing
+  #+end_src
+
+
 **** jobs
 when a fg process goes background in suspended state it enters joblist
 jobs       # List jobs
